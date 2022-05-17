@@ -1,0 +1,13 @@
+<div class="list">
+  <form class="form1" (submit)="addList()">
+    <h2>LISTS</h2>
+    <span class="l1">
+        <input id="list1" class="form-control form-control-lg" type="text" placeholder="Add elements" name="todlist" [(ngModel)]="tostring">
+      <!-- <input type="text" name="todlist" [(ngModel)]="tostring"> -->
+      <button type="submit" class="btn btn-success">Add</button>
+    </span>
+  </form>
+  <div class="content">
+    <h1 *ngFor="let item of todos">{{item.content}}<span><button type="submit" (click)="delete(item.id)" class="delete">X</button></span></h1>
+  </div>
+</div>
